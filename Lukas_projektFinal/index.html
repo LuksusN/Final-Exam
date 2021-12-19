@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Old Spice | Homepage</title>
+    <meta name="description" content="new Old Spice concept with unisex line" />
+    <meta name="keywords" content="Old Spice, unisex, new, vegan, sustainable, body wash, cosmetics
+    eco, health, self-care" />
+    <meta name="author" content="Lukas Nagy" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;600&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style/index.css" />
+  </head>
+  <body>
+    <div>
+      <span
+        class="header__btn header__btn--open"
+        id="menuOpener"
+        onclick="openMenu(true)"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <header class="header" id="menu">
+        <nav class="header__container">
+          <div class="header__section header__section--logo">
+            <a
+              class="header__link header__logo"
+              id="headerHomepage"
+              href="./index.html"
+            >
+              <img src="./assets/images/logo_old_spice.png" alt="Old Spice" />
+            </a>
+          </div>
+          <div class="header__section header__section--links">
+            <div class="header__section header__section--left">
+              <a class="header__link" href="./shop.html"> Shop </a>
+              <a class="header__link" href="./inspiration.html"> Inspiration </a>
+              <a class="header__link" href="./about-us.html">
+                About Us
+              </a>
+            </div>
+            <div class="header__section header__section--right">
+              <a class="header__link" href="./search.html">
+                <img src="./assets/images/search.svg" alt= 'search icon'/>
+              </a>
+              <a class="header__link" href="./shopping-cart.html">
+                <img src="./assets/images/shopping_cart.svg" alt='shopping cart icon'/>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <span class="header__btn header__btn--close" onclick="openMenu(false)">
+          x
+        </span>
+      </header>
+    </div>
+
+    <div class="banner">
+      <div class="banner__container">
+        <div class="banner__section banner__section--left">
+          <img src="./assets/images/bottles.png" alt="Old spice products" />
+        </div>
+        <div class="banner__section banner__section--right">
+          <p>dive in to the new collection meant truly for everyone</p>
+          <a class="banner__btn" href="./shop.html">
+            Explore <img src="./assets/images/arrow_right.png" alt='pointing arrow right icon'/>
+          </a>
+        </div>
+      </div>
+      <a class="banner__arrow" href="#explore"
+        ><img src="./assets/images/arrow_down.png"alt='pointing arrow down icon'
+      /></a>
+    </div>
+
+    <div class="articles" id="explore">
+      <article class="article article__this-is-us">
+        <img src="./assets/images/this_is_us.png" alt='nature'/>
+        <h1>This is us</h1>
+        <div>
+          <p>
+            From the nature directly to you. We have revitalised our procedures
+            and bring ultimately new vegan and cruelty-free unisex line.
+          </p>
+          <p>
+            Our mission is you, our vision is a better world - yours and all
+            ours and our values are what makes us be here for you. See our
+            journey and how you help us to be.
+          </p>
+          <a href="./about-us.html">
+            Find out more<img src="./assets/images/arrow_right.png" alt='pointing arrow right icon'/>
+          </a>
+        </div>
+      </article>
+      <article class="article article__inspiration">
+        <img src="./assets/images/motivation.png" alt='circle of people holding hands'/>
+        <h1>Inspiration</h1>
+        <div>
+          <p>
+            With the help of our fellow members and community, we offer more
+            that just skin-care. Care to join us on a self-discovery?
+          </p>
+          <p>
+            Check out our mentoring program for youngsters to become truly the
+            ‘sailors of their lives’, self-care tips, and much more upcoming!
+          </p>
+          <a href="./inspiration.html">
+            Let's relax! <img src="./assets/images/arrow_right.png" alt='pointing arrow right icon'/>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div class="newsletter">
+      <article>
+        <h1>Stay tuned for more</h1>
+        <p>
+          keep up with the latest updates from our House of Spice, get
+          discounts, treats and much more!
+        </p>
+        <p>
+          Don’t forget to share it with your peers and now, 2 of your friends
+          can save up to 25% and you up to 30%!
+        </p>
+        <input type="text" placeholder="Email address" />
+      </article>
+    </div>
+
+    <div class="favourites">
+      <article>
+        <h1>Your Favourites</h1>
+        <p>
+          See the favourites of the month and find a new one for you too! Sign
+          up now and receive your discount already today
+        </p>
+        <section class="favourites__products">
+          <div class="favourites__card favourites__card--left">
+            <img
+              class="arrow arrow--left"
+              src="./assets/images/arrow_left.png"
+              alt="arrow left"
+            />
+            <img src="./assets/images/lotion_orange.png" alt="orange lotion" />
+          </div>
+          <div class="favourites__card favourites__card--middle">
+            <img src="./assets/images/lotion_fiji.png" alt="fiji lotion" />
+          </div>
+          <div class="favourites__card favourites__card--right">
+            <img src="./assets/images/lotion_blue.png" alt="blue lotion" />
+            <img
+              class="arrow arrow--right"
+              src="./assets/images/arrow_right_black.png"
+              alt="arrow right"
+            />
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">
+      <div>
+        <section class="footer__socials">
+          <a href="#">
+            <img src="./assets/images/ig.svg" alt="Old Spice's instagram"
+          /></a>
+          <a href="#">
+            <img src="./assets/images/fb.svg" alt="Old Spice's facebook"
+          /></a>
+          <a href="#">
+            <img src="./assets/images/tw.svg" alt="Old Spice's twitter"
+          /></a>
+          <a href="#">
+            <img src="./assets/images/ti.svg" alt="Old Spice's tiktok"
+          /></a>
+        </section>
+        <ul class="footer__contact">
+          <li>
+            <img src="./assets/images/mail.svg" alt="Email" /><a
+              href="mailto:support@oldspice.com"
+              >support@oldspice.com</a
+            >
+          </li>
+          <li>
+            <img src="./assets/images/mail.svg" alt="Phone number" /><a
+              href="tel:+4582693420"
+              >+45 82 69 34 20</a
+            >
+          </li>
+          <li>Mon - Fri 9:00 - 17:00</li>
+        </ul>
+        <ul class="footer__links">
+          <li>
+            <a href="./terms_and_conditions.html">Terms & Conditions</a>
+          </li>
+          <li>
+            <a href="./privacy_policy.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="./faq.html">FAQ/ Shipping</a>
+          </li>
+        </ul>
+      </div>
+      <section class="footer__copyright">
+        <p>All rights reserved © 2021 Old Spice</p>
+        <p>Pictures copyright © Old Spice, Saniskoro, Pixabay, Maeder</p>
+      </section>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

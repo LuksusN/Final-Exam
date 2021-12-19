@@ -1,0 +1,308 @@
+@import "variables.less";
+@import "common.less";
+@import "header.less";
+@import "footer.less";
+
+//----------------Banner-------------------------------------------
+.banner {
+  height: 100vh;
+  &__container {
+    background-image: url("../images/banner_sunset.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 90%;
+  }
+  &__section {
+    padding: 0 5px;
+    &--left img {
+      position: relative;
+      top: 20%;
+      max-width: 140px;
+      width: 100%;
+    }
+    &--right {
+      text-align: center;
+      max-width: 30%;
+      color: @white;
+      & > p {
+        position: relative;
+        top: 42%;
+      }
+    }
+  }
+  &__btn {
+    background: none;
+    border: none;
+    font-size: 38px;
+    margin: 0 auto;
+    color: @white;
+    position: relative;
+    top: 48%;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__arrow {
+    display: block;
+    margin: 0 auto;
+    max-width: 50px;
+  }
+}
+@media screen and (min-width: 390px) {
+  .banner {
+    &__section {
+      padding: 0 20px;
+      &--left img {
+        max-width: 170px;
+      }
+      &--right > p {
+        top: 47%;
+      }
+    }
+  }
+  &__btn {
+    font-size: 45px;
+    top: 50%;
+  }
+}
+
+//----------------Articles-------------------------------------------
+.article {
+  position: relative;
+  margin-top: 40px;
+  z-index: 2;
+  color: white;
+  &::before {
+    content: "";
+    height: 100%;
+    width: 92%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    left: calc(50% - (92% / 2));
+    border-radius: 20px;
+  }
+  &__this-is-us::before {
+    background-color: @blue;
+  }
+  &__inspiration::before {
+    background-color: @orange;
+  }
+  & > img {
+    width: 100%;
+  }
+  & > h1 {
+    color: @white;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+  }
+  & > div {
+    max-width: 80%;
+    margin: 0 auto;
+    & > a {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 25px;
+      color: @white;
+      text-align: right;
+      width: 100%;
+      padding: 60px 0 45px;
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      & > img {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 780px) {
+  .articles {
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  .article {
+    max-width: 42%;
+  }
+}
+
+//----------------Newsletter-------------------------------------------
+.newsletter {
+  margin-top: 40px;
+  & > article {
+    width: 100%;
+    position: relative;
+    &::before {
+      content: "";
+      background-image: url("../images/ellipse.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: -80px;
+    }
+    &::after {
+      content: "";
+      background-image: url("../images/elipse.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      bottom: -50px; 
+      left: 50px; 
+    }
+    & > h1 {
+      font-size: 40px;
+      width: 70%;
+      text-align: center;
+      margin: 20px auto;
+    }
+    & > p {
+      width: 80%;
+      max-width: 600px;
+      margin: 15px auto;
+    }
+    & > input {
+      height: 25px;
+      width: 65%;
+      padding: 5px;
+      margin: 30px auto 60px;
+      display: block;
+    }
+  }
+}
+
+//----------------Favourites-------------------------------------------
+.favourites {
+  margin: 40px 0 60px;
+  & > article {
+    width: 100%;
+    & > h1 {
+      font-size: 40px;
+      width: 70%;
+      text-align: center;
+      margin: 20px auto;
+    }
+    & > p {
+      width: 80%;
+      max-width: 600px;
+      margin: 15px auto;
+    }
+  }
+  &__products {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    &::before {
+      background: linear-gradient(
+        to right,
+        #00a88a 0%,
+        #fff 45%,
+        #fff 55%,
+        #ed7e3a 100%
+      );
+      content: "";
+      height: 90%;
+      width: 120%;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      filter: blur(8px);
+      left: -10%;
+      top: 5%;
+    }
+  }
+  &__card {
+    background-color: @white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 45px 0;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &--left {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding: 15px 25px 15px 0;
+    }
+    &--middle {
+      display: none;
+    }
+    &--right {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      padding: 15px 0 15px 25px;
+    }
+    & > img.arrow {
+      max-width: 20px;
+      max-height: 25px;
+      position: relative;
+      top: 45%;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (min-width: 780px) {
+  .favourites {
+    margin-top: 40px;
+    & > article {
+      width: 95%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    &__products {
+      justify-content: space-evenly;
+      overflow: unset;
+      border-radius: 20px;
+      &::before {
+        width: 100%;
+        left: unset;
+      }
+    }
+    &__card {
+      border-radius: 20px;
+      width: 20%;
+      padding: 15px;
+      &--middle {
+        display: block;
+      }
+      & > img.arrow {
+        max-width: 20px;
+        max-height: 25px;
+        position: absolute;
+        top: 45%;
+        &--left {
+          left: 30px;
+        }
+        &--right {
+          right: 30px;
+        }
+      }
+    }
+  }
+}
